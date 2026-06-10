@@ -1,0 +1,62 @@
+Loading Yelp business dataset...
+Extracting attributes...
+Discretizing continuous variables...
+Data preparation complete! Final dataset shape: (28213, 7)
+Sample of the cleaned data ready for the Network:
+  stars review_count_bin RestaurantsPriceRange2 OutdoorSeating RestaurantsDelivery HasTV BikeParking
+0   2.0              Low                      1           True                True  True       False
+1   2.5           Medium                      1          False                True  True       False
+2   4.5             High                      1          False                True  True        True
+3   2.5             High                      2           True                True  True        True
+4   4.0             High                      2          False                True  True        True
+Starting Bayesian Network Data Scaling Experiment...
+
+--- Training on 10.0% of data ---
+/Users/christohperkaing/179_proj/yelp-bayesian/notebooks/chris.py:100: FutureWarning: HillClimbSearch is deprecated and will be removed in v1.3.0. Please use
+            pgmpy.causal_discovery.HillClimbSearch instead.
+  hc = HillClimbSearch(sample_train)
+  0%|                                                                          | 8/1000000 [00:00<2:16:49, 121.81it/s]
+Learned 8 edges. SHD from previous: 0
+100%|█████████████████████████████████████████████████████████████████████████████| 142/142 [00:00<00:00, 1371.60it/s]
+Test Set Accuracy: 0.2596
+
+--- Training on 25.0% of data ---
+/Users/christohperkaing/179_proj/yelp-bayesian/notebooks/chris.py:100: FutureWarning: HillClimbSearch is deprecated and will be removed in v1.3.0. Please use
+            pgmpy.causal_discovery.HillClimbSearch instead.
+  hc = HillClimbSearch(sample_train)
+  0%|                                                                          | 8/1000000 [00:00<2:09:51, 128.34it/s]
+Learned 8 edges. SHD from previous: 4
+100%|█████████████████████████████████████████████████████████████████████████████| 142/142 [00:00<00:00, 1426.85it/s]
+Test Set Accuracy: 0.2559
+
+--- Training on 50.0% of data ---
+/Users/christohperkaing/179_proj/yelp-bayesian/notebooks/chris.py:100: FutureWarning: HillClimbSearch is deprecated and will be removed in v1.3.0. Please use
+            pgmpy.causal_discovery.HillClimbSearch instead.
+  hc = HillClimbSearch(sample_train)
+  0%|                                                                         | 10/1000000 [00:00<2:11:57, 126.30it/s]
+Learned 9 edges. SHD from previous: 5
+100%|█████████████████████████████████████████████████████████████████████████████| 142/142 [00:00<00:00, 1265.14it/s]
+Test Set Accuracy: 0.2566
+
+--- Training on 75.0% of data ---
+/Users/christohperkaing/179_proj/yelp-bayesian/notebooks/chris.py:100: FutureWarning: HillClimbSearch is deprecated and will be removed in v1.3.0. Please use
+            pgmpy.causal_discovery.HillClimbSearch instead.
+  hc = HillClimbSearch(sample_train)
+  0%|                                                                         | 10/1000000 [00:00<2:28:20, 112.35it/s]
+Learned 10 edges. SHD from previous: 11
+100%|█████████████████████████████████████████████████████████████████████████████| 142/142 [00:00<00:00, 1170.14it/s]
+Test Set Accuracy: 0.2548
+
+--- Training on 100.0% of data ---
+/Users/christohperkaing/179_proj/yelp-bayesian/notebooks/chris.py:100: FutureWarning: HillClimbSearch is deprecated and will be removed in v1.3.0. Please use
+            pgmpy.causal_discovery.HillClimbSearch instead.
+  hc = HillClimbSearch(sample_train)
+  0%|                                                                         | 12/1000000 [00:00<2:34:20, 107.99it/s]
+Learned 12 edges. SHD from previous: 6
+100%|█████████████████████████████████████████████████████████████████████████████| 142/142 [00:00<00:00, 1173.97it/s]
+Test Set Accuracy: 0.2472
+
+=== FINAL EXPERIMENT RESULTS ===
+Data Fractions Used: [0.1, 0.25, 0.5, 0.75, 1.0]
+Graph Stability (SHD): [0, 4, 5, 11, 6]
+Predictive Accuracies: [0.25961368066631224, 0.2558922558922559, 0.2566010987063619, 0.25482899167109696, 0.24720893141945774]
